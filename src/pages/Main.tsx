@@ -19,8 +19,25 @@ export default function Main({ navigation }: StackScreenProps<any>) {
     const mapViewRef = useRef<MapView>(null);
 
     const [devs, setDevs] = useState<User[]>([]);
+
     const [userLocation, setUserLocation] = useState<LatLng>();
     const [currentRegion, setCurrentRegion] = useState<Region>();
+
+    const user5 = {
+        login: 'AMAllen15',
+        avatar_url:
+            'https://png.pngtree.com/png-clipart/20200701/original/pngtree-cat-default-avatar-png-image_5416936.jpg',
+        bio: null,
+        company: 'Pixeltree',
+        name: 'April Allen',
+        coordinates: {
+            latitude: 51.05011,
+            longitude: -114.08529,
+        },
+        id: 5,
+    };
+
+    devs.push(user5);
 
     useEffect(() => {
         getUsers()

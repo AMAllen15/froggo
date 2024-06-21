@@ -23,6 +23,7 @@ export default function Main({ navigation }: StackScreenProps<any>) {
     const [userLocation, setUserLocation] = useState<LatLng>();
     const [currentRegion, setCurrentRegion] = useState<Region>();
 
+    //Puts my location in Calgary, ab
     const user5 = {
         login: 'AMAllen15',
         avatar_url:
